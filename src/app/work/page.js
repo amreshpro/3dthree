@@ -2,7 +2,6 @@
 
 import { useSelector } from "react-redux"
 import City2 from "../canvas/City2"
-import City3 from "../canvas/City3"
 import ProjectCard from "./ProjectCard"
 import { clones , othersContribution } from "@/constant/project"
 
@@ -13,7 +12,7 @@ const page = () => {
   return (
     <>
     <div className={` ${currentMode ? 'bg-work-dark':'bg-work'} absolute w-[100vw] h-[100vh]  `}>
-{/* <City3/> */}
+
 <City2/>
     </div>
     <h1 className="text-4xl font-nunito pt-16 text-center font-bold text-sky-200 ">Work</h1>
