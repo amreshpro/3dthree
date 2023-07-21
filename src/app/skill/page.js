@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import SkillCard from './SkillCard'
 import skills from '@/constant/skills'
 import Avtar from '../canvas/Avtar'
-import City3 from '../canvas/City3'
+
 
 
 
