@@ -30,7 +30,7 @@ const page = () => {
 }
 </section>
 
-<section className="avtar z-10 absolute sm:left-0 ">
+<section className="avtar z-10 absolute sm:left-0  w-[100vw] h-[100vh]">
 <Avtar/>
 </section>
 
