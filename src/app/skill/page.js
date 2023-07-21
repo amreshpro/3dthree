@@ -33,9 +33,7 @@ const page = () => {
 <section className="avtar z-10 absolute sm:left-0 ">
 <Avtar/>
 </section>
-<section className="city -z-10 absolute sm:left-0 ">
-<City3/>
-</section>
+
 
     </div>
 
