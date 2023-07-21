@@ -14,19 +14,46 @@
 
 body{
   /* background: url("/bg/bg3.jpg"); */
-  /* background: #c7f7f8; */
-  background: url("/plainbg.jpg");
-  object-fit: fill;
+  /* background: #8ac3da; */
+  /* background: url("/bg2.jpg"); */
+  /* object-fit: fill; */
+  scroll-behavior: smooth;
+  scroll-snap-type:y mandatory;
 }
 
 .bg-contact{
-  background: url("/plainbg.jpg");
+background: #fffbe1;
 
 }
 .bg-contact-dark{
-  background: url("/contact.jpg");
+  background:#010113;
+  object-fit: contain;
 
 }
+
+
+.bg-work{
+  background:#83b2da;
+
+}
+.bg-work-dark{
+  background:#000;
+
+
+}
+
+
+.bg-skill{
+  background:#e0f3bb;
+
+}
+.bg-skill-dark{
+  background:#000;
+
+
+}
+
+
 
 
 .bg-dark{
@@ -47,10 +74,7 @@ canvas{
 
 }
 
-.bg-skill{
-  background: #01102c;
-  color: #ffffff;
-}
+
 
 
 

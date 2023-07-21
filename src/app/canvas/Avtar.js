@@ -3,11 +3,17 @@
 import React, { Suspense, useRef } from 'react'
 import { Center, OrbitControls, useGLTF } from '@react-three/drei'
 import FallbackLoader from '../pages/FallbackLoader'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 function AvtarModel(props) {
+  const groupRef  = useRef()
+  useFrame(({clock})=>{
+groupRef.current.rotation.y += 0.005
+  })
+  
   const { nodes, materials } = useGLTF('/avtar/avtar.glb')
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={groupRef} >
       <primitive object={nodes.Hips} />
       <skinnedMesh geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
       <skinnedMesh geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
@@ -30,7 +36,7 @@ useGLTF.preload('/avtar/avtar.glb')
 
 const Avtar = () => {
   return (
-    <>
+    <Canvas  camera={{fov:80,position:[0.4,0.4,-1.5]}}>
     
     <ambientLight/>
     <OrbitControls enableZoom={false} />
@@ -41,7 +47,7 @@ const Avtar = () => {
       </Suspense>
     </Center>
     
-    </>
+    </Canvas>
   )
 }
 

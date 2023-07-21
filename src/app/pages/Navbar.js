@@ -10,6 +10,7 @@ import { changeColorMode } from '@/redux/darkModeSlice';
 import Link from 'next/link';
 
 
+
 const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpenOpen] = useState(false)
@@ -29,19 +30,32 @@ const Navbar = () => {
        
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
 
         <div className={`z-50 ${isDarkMode ? "bg-transparent":'' } w-[100vw]  fixed `}>
 
 
-            <nav className={`${isDarkMode ? 'text-green-300':'text-indigo-900' }  flex justify-between  px-8 py-4 z-50`}>
+            <nav className={`${isDarkMode ? 'text-green-300':'text-blue-900' }  flex justify-between  px-8 py-4 z-50`}>
                 <div className="logo flex gap-2 ">
 
 
 
 
-                    <h1 className={` ${isDarkMode ? 'text-green-300' : 'text-indigo-900' }  text-2xl font-nunito font-bold `}>Amresh</h1>
-                    <button onClick={toggleDarkModeHandler} >{isDarkMode ? <LuSunMoon className="mb-4 text-3xl font-bold  text-orange-300" /> : <BsMoonStarsFill className="text-2xl mt-0.5 ml-1 font-bold  mb-4 text-indigo-900" />}</button>
+                    <h1 className={` ${isDarkMode ? 'text-green-300' : 'text-blue-900' }  text-2xl font-nunito font-bold `}>Amresh</h1>
+                    <button onClick={toggleDarkModeHandler} >{isDarkMode ? <LuSunMoon className="mb-4 text-3xl font-bold  text-orange-300" /> : <BsMoonStarsFill className="text-2xl mt-0.5 ml-1 font-bold  mb-4 text-blue-900" />}</button>
                 </div>
 
 
@@ -66,7 +80,7 @@ const Navbar = () => {
             <div onClick={() => setIsMenuOpenOpen((prev) => {
 
                 return prev === true ? false : true;
-            })}> {isMenuOpen ? <VscChromeClose className="mt-5 mr-5 text-indigo-900 text-2xl absolute top-0 right-1 invisible sm:visible" /> : <LuMenu className="mt-5 mr-5   text-3xl absolute top-0 right-1 invisible text-indigo-900 sm:visible" />}</div>
+            })}> {isMenuOpen ? <VscChromeClose className="mt-5 mr-5 text-blue-900 text-2xl absolute top-0 right-1 invisible sm:visible" /> : <LuMenu className="mt-5 mr-5   text-3xl absolute top-0 right-1 invisible text-blue-900 sm:visible" />}</div>
 
 
 

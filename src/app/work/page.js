@@ -1,30 +1,46 @@
 "use client"
-import { useEffect } from "react"
+
+import { useSelector } from "react-redux"
+import City2 from "../canvas/City2"
+import City3 from "../canvas/City3"
 import ProjectCard from "./ProjectCard"
-import axios from "axios"
+import { clones , othersContribution } from "@/constant/project"
 
 const page = () => {
-  function fetchData(){
-useEffect(async()=>{
+  const currentMode = useSelector((state) => state.darkMode)
 
-const res = await axios.post("/api/socialLinks")
- 
-const data = await res.json()
-console.log(data)
-return data
-})
-
-
-
-}
-
-fetchData()
 
   return (
-    <div className="flex flex-wrap items-center justify-center">
-<ProjectCard/>
-
+    <>
+    <div className={` ${currentMode ? 'bg-work-dark':'bg-work'} absolute w-[100vw] h-[100vh]  `}>
+{/* <City3/> */}
+<City2/>
     </div>
+    <h1 className="text-4xl font-nunito pt-16 text-center font-bold text-sky-200 ">Work</h1>
+ 
+ <div className="flex flex-wrap gap-4 justify-center ">
+
+
+{
+  clones.map((item)=>{
+    return <section key={item.id}>
+      <ProjectCard {...item} />
+    </section>
+  })
+}
+
+{
+  othersContribution.map((item)=>{
+    return <section key={item.id}>
+      <ProjectCard {...item} />
+    </section>
+  })
+}
+
+
+
+ </div>
+    </>
   )
 }
 export default page

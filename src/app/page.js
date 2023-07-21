@@ -1,5 +1,8 @@
-import CanavsContainer from "./canvas/CanavsContainer.js"
+"use client"
 import Hero from "./pages/Hero.js"
+import Work from '@/app/work/page.js'
+import Skill from '@/app/skill/page.js'
+import Contact from '@/app/contact/page.js'
 
 
 
@@ -8,8 +11,14 @@ import Hero from "./pages/Hero.js"
 const page = () => {
   return (
     <>
-   <Hero/>
+    <Hero/>
     
+    <Work/>
+   
+    <Skill/>
+ 
+    <Contact/>
+  
     
     </>
   )
