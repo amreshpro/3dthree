@@ -8,7 +8,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 function AvtarModel(props) {
   const groupRef  = useRef()
   useFrame(({clock})=>{
-groupRef.current.rotation.y += 0.005
+groupRef.current.rotation.y += 0.05
   })
   
   const { nodes, materials } = useGLTF('/avtar/avtar.glb')

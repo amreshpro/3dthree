@@ -17,6 +17,7 @@ body{
   /* background: #8ac3da; */
   /* background: url("/bg2.jpg"); */
   /* object-fit: fill; */
+  background: #abc4f3;
   scroll-behavior: smooth;
   scroll-snap-type:y mandatory;
 }
