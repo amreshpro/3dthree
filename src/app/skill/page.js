@@ -16,7 +16,7 @@ const page = () => {
 
 <h1 className="text-center font-bold font-nunito text-3xl text-indigo-900 py-3">Skills</h1>
 
-<section className="avtar z-10 absolute sm:left-0  w-[100vw] h-[100vh]">
+<section className="avtar z-10 absolute sm:left-0  w-[100vw] h-screen">
 <Avtar/>
 </section>
 <div className="skill flex flex-wrap relative justify-center items-center">
