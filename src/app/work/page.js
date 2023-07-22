@@ -17,7 +17,7 @@ const page = () => {
     </div>
     <h1 className="text-4xl font-nunito pt-16 text-center font-bold text-sky-200    ">Work</h1>
  
- <div className="flex flex-wrap gap-4 justify-center ">
+ <div className="flex flex-wrap gap-4 justify-center pb-10 ">
 
 
 {
