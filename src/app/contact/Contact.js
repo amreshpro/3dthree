@@ -57,10 +57,10 @@ if(message.length>3){setIsEmpty((prev)=>{return{...prev,message:""}})}
       try {
         await emailjs
           .sendForm(
-            "service_ag81x54",
-            "template_fsu30ii",
+            "serviceID",
+            "templateID",
             form.current,
-            "RG54GFebTODsx5ksH"
+            "secretKey"
           )
           .then(
             (result) => {
