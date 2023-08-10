@@ -213,7 +213,7 @@ const City = () => {
     camera={{fov:85,position:[0.8,0.8,-2.5]}}
     >
     {
-      currentMode ?    <pointLight color="white" intensity={0.7} position={[10, 10, 10]} />  :  <ambientLight/>
+      currentMode ?    <pointLight color="white" intensity={0.2} position={[10, 10, 10]} />  :  <ambientLight/>
     }
  
     <OrbitControls enableZoom={false}/>
